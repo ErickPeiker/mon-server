@@ -1,0 +1,24 @@
+company-list:
+    path: /company
+    controller: App\Controller\CompanyController::listAction
+    methods: [get]
+
+company-show:
+    path: /company/{id}
+    controller: App\Controller\CompanyController::showAction
+    methods: [get]
+
+company-new:
+    path: /company
+    controller: App\Controller\CompanyController::newAction
+    methods: [post]
+
+company-edit:
+    path: /company/{id}
+    controller: App\Controller\CompanyController::editAction
+    methods: [put]
+
+company-delete:
+    path: /company/{id}
+    controller: App\Controller\CompanyController::deleteAction
+    methods: [delete]

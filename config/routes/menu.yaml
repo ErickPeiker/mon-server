@@ -1,0 +1,4 @@
+menu-list:
+    path: /menu
+    controller: App\Controller\MenuController::listAction
+    methods: [get]

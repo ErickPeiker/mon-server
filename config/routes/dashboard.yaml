@@ -1,0 +1,24 @@
+dashboard-list:
+    path: /dashboard
+    controller: App\Controller\DashboardController::listAction
+    methods: [get]
+
+dashboard-show:
+    path: /dashboard/{id}
+    controller: App\Controller\DashboardController::showAction
+    methods: [get]
+
+dashboard-new:
+    path: /dashboard
+    controller: App\Controller\DashboardController::newAction
+    methods: [post]
+
+dashboard-edit:
+    path: /dashboard/{id}
+    controller: App\Controller\DashboardController::editAction
+    methods: [put]
+
+dashboard-delete:
+    path: /dashboard/{id}
+    controller: App\Controller\DashboardController::deleteAction
+    methods: [delete]

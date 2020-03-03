@@ -1,0 +1,29 @@
+user-list:
+    path: /user
+    controller: App\Controller\UserController::listAction
+    methods: [get]
+
+user-show:
+    path: /user/{id}
+    controller: App\Controller\UserController::showAction
+    methods: [get]
+
+user-new:
+    path: /user
+    controller: App\Controller\UserController::newAction
+    methods: [post]
+
+user-edit:
+    path: /user/{id}
+    controller: App\Controller\UserController::editAction
+    methods: [put]
+
+user-delete:
+    path: /user/{id}
+    controller: App\Controller\UserController::deleteAction
+    methods: [delete]
+
+user-switch-company:
+    path: /user/switch-company/{companyId}
+    controller: App\Controller\UserController::switchCompanyAction
+    methods: [post]

@@ -1,0 +1,29 @@
+widget-list:
+    path: /widget
+    controller: App\Controller\WidgetController::listAction
+    methods: [get]
+
+widget-show:
+    path: /widget/{id}
+    controller: App\Controller\WidgetController::showAction
+    methods: [get]
+
+widget-new:
+    path: /widget
+    controller: App\Controller\WidgetController::newAction
+    methods: [post]
+
+widget-edit:
+    path: /widget/{id}
+    controller: App\Controller\WidgetController::editAction
+    methods: [put]
+
+widget-delete:
+    path: /widget/{id}
+    controller: App\Controller\WidgetController::deleteAction
+    methods: [delete]
+
+widget-chart-data:
+    path: /widget/{id}/chart-data
+    controller: App\Controller\WidgetController::chartDataAction
+    methods: [get]

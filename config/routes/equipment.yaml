@@ -1,0 +1,19 @@
+equipment-list:
+    path: /equipment
+    controller: App\Controller\EquipmentController::listAction
+    methods: [get]
+
+equipment-show:
+    path: /equipment/{id}
+    controller: App\Controller\EquipmentController::showAction
+    methods: [get]
+
+equipment-edit:
+    path: /equipment/{id}
+    controller: App\Controller\EquipmentController::editAction
+    methods: [put]
+
+equipment-delete:
+    path: /equipment/{id}
+    controller: App\Controller\EquipmentController::deleteAction
+    methods: [delete]

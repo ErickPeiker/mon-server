@@ -1,0 +1,36 @@
+version: "2"
+
+services:
+    web:
+        image: nginx:latest
+        tty: true
+        links:
+            - app
+        depends_on:
+            - app
+        ports:
+            - '8081:443'
+        volumes:
+            - ./:/var/www
+            - ./docker/conf.d:/etc/nginx/conf.d
+            - ./docker/ssl/site-ssl.crt:/etc/nginx/site-ssl.crt
+            - ./docker/ssl/site-ssl.key:/etc/nginx/site-ssl.key
+
+    app:
+        build: ./docker
+        tty: true
+        links:
+            - db
+        depends_on:
+            - db
+        volumes:
+            - ./:/var/www
+        working_dir: '/var/www'
+
+    db:
+        image: mysql:5.7
+        ports:
+            - '8082:3306'
+        environment:
+            - MYSQL_ROOT_PASSWORD=123123
+            - MYSQL_DATABASE=owlmo

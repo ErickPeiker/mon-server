@@ -1,0 +1,9 @@
+report-synthetic:
+    path: /report/synthetic
+    controller: App\Controller\ReportController::syntheticAction
+    methods: [get]
+
+report-analytic:
+    path: /report/analytic
+    controller: App\Controller\ReportController::analyticAction
+    methods: [get]

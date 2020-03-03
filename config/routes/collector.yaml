@@ -1,0 +1,24 @@
+collector-list:
+    path: /collector
+    controller: App\Controller\CollectorController::listAction
+    methods: [get]
+
+collector-show:
+    path: /collector/{id}
+    controller: App\Controller\CollectorController::showAction
+    methods: [get]
+
+collector-new:
+    path: /collector
+    controller: App\Controller\CollectorController::newAction
+    methods: [post]
+
+collector-edit:
+    path: /collector/{id}
+    controller: App\Controller\CollectorController::editAction
+    methods: [put]
+
+collector-delete:
+    path: /collector/{id}
+    controller: App\Controller\CollectorController::deleteAction
+    methods: [delete]

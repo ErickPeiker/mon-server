@@ -1,0 +1,9 @@
+item-type-list:
+    path: /item-type
+    controller: App\Controller\ItemTypeController::listAction
+    methods: [get]
+
+item-type-item:
+    path: /item-type/{id}/item
+    controller: App\Controller\ItemTypeController::listItemAction
+    methods: [get]

@@ -1,0 +1,30 @@
+parameters:
+    env(DATABASE_URL): ''
+
+doctrine:
+    dbal:
+        driver: 'pdo_mysql'
+        url: '%env(resolve:DATABASE_URL)%'
+        charset: UTF8
+        server_version: '5.7'
+        types:
+            ActionType: App\Enumerator\ActionType
+            CompanyType: App\Enumerator\CompanyType
+            FunctionType: App\Enumerator\FunctionType
+            ValueType: App\Enumerator\ValueType
+            WidgetType: App\Enumerator\WidgetType
+    orm:
+        mappings:
+            App:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Entity'
+                prefix: 'App\Entity'
+                alias: App
+        filters:
+            company:
+                class: App\Filter\CompanyFilter
+                enabled: true
+            softdeleteable:
+                class: Gedmo\SoftDeleteable\Filter\SoftDeleteableFilter
+                enabled: true

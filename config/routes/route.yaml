@@ -1,0 +1,4 @@
+route-list:
+    path: /route
+    controller: App\Controller\RouteController::listAction
+    methods: [get]

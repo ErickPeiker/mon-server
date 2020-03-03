@@ -1,0 +1,24 @@
+group-list:
+    path: /group
+    controller: App\Controller\GroupController::listAction
+    methods: [get]
+
+group-show:
+    path: /group/{id}
+    controller: App\Controller\GroupController::showAction
+    methods: [get]
+
+group-new:
+    path: /group
+    controller: App\Controller\GroupController::newAction
+    methods: [post]
+
+group-edit:
+    path: /group/{id}
+    controller: App\Controller\GroupController::editAction
+    methods: [put]
+
+group-delete:
+    path: /group/{id}
+    controller: App\Controller\GroupController::deleteAction
+    methods: [delete]

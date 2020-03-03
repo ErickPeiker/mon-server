@@ -1,0 +1,9 @@
+incident-list:
+    path: /incident
+    controller: App\Controller\IncidentController::listAction
+    methods: [get]
+
+incident-new:
+    path: /incident
+    controller: App\Controller\IncidentController::newAction
+    methods: [get]

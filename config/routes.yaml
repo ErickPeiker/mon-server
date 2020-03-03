@@ -1,0 +1,6 @@
+api:
+    prefix: /
+    resource: ./routes/
+    type: directory
+    defaults:
+        _format: json
